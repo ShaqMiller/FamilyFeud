@@ -1,29 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;0,700;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
 body{
-    background-color: #0D1821;
+    background-color: #0D1821!important;
     justify-content: center;
     align-items: center;
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.container{
-    margin: 100px 0 40px 0;
-    display: inline-block;
-    background-color: #FFFFFB;
-    width: 30%;
-    border-radius: 10px;
+.landing{
+    height: 100%;
+}
+.lobbycontainer{
+    height: 100%;
+    /* background-color: #162938; */
+    background-color: #010d16;
+}
+.landingGrid{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 100%;
 }
 .inputs{
     padding: 0px 20px;
 }
+.lobbycontainer > .header-container{
+    background-image: url("../../public/lobbyBG.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 50px;
+    background-size: 200%;
+
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    animation: backgroundMove  50s ease-in infinite;
+
+}
 .header{
     color: rgb(255, 255, 255);
-    background-color: #FF6B6C;
-    padding: 15px 0;
+    /* background-color: #FF6B6C; */
     font-size: 40px;
-    margin-bottom: 10px;
-    border-radius: 5px 5px 0 0;
+    margin-bottom: 20px;
+}
+.usernameContainer{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 10px;
+    text-align: center  ;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#usernameInput{
+    border-right: 0;
+    border-top: 0;
+    border-left: 0;
+    width: 400px;
+}#usernameInput:focus{
+    box-shadow:none;
+}#usernameInput::placeholder{
+    text-align: center;
+}
+.usernameBut-red{
+    margin: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #d83838;
+}
+.usernameBut-green:hover{
+    background-color: #a72020;
+}
+.usernameBut-green{
+    margin: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #38d88d;
+}
+.usernameBut-green:hover{
+    background-color: #138f32;
+}
+
+
+.usernameContainer > .mb-3{
+    margin:0
 }
 
 .inputContainer{
@@ -36,6 +96,21 @@ body{
 .inputContainer >input{
     width: 99%;
     height: 25px;
+}
+
+.createGameBut{
+    color: white;
+    display: inline;
+    padding: 15px 50px;
+    background-color: #FF6B6C;
+    cursor: pointer;
+    border-radius: 50px;
+   
+}
+.createGameBut:hover{
+    color: #c5c5c5;
+    background-color: #9d2e2e;
+    animation: linger 5s ease-in infinite;
 }
 .but{
     display: inline-block;
@@ -68,4 +143,200 @@ body{
     text-decoration: none;
 }.info>a:hover{
     color: #d89838;
+}
+
+
+.section{
+    padding: 10px 10px;
+    color: white;
+    border-top: solid 1px grey;
+}
+.sectionTitle{
+    font-size: 10px;
+}
+
+/* Game info */
+.gameInfoContainer{
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+    padding: 20px 10px;
+}.gameInfoContainer:hover{
+    background-color: #132635;
+    cursor: pointer;
+}
+
+.gameInfoTextContainer{
+    align-items: center;
+    margin: 0px 10px;
+}
+.gameInfoImg{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: rgb(245, 244, 243);
+}
+.gameInfoHeader{
+    font-size: 18px;
+}
+.gameInfoSub{
+    font-size: 10px;
+    color: #8d8d8d;
+}
+/* PLayer Info */
+.playerInfoContainer{
+    display: flex;
+    margin: 25px 0;
+    align-items: center;
+}
+.playerInfoTextContainer{
+    align-items: center;
+    margin: 0px 10px;
+}
+.playerInfoImg{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: rgb(245, 244, 243);
+    border: 1px solid rgb(0, 0, 0);
+}
+.playerInfoHeader{
+    font-size: 16px;
+    color: white;
+}
+.playerInfoSub{
+    align-items: center;
+    display: flex;
+    font-size: 10px;
+    color: #8d8d8d;
+}
+
+.inviteInfoTextContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.inviteInfoHeader{
+    font-size: 16px;
+}
+.inviteInfoSub{
+    font-size: 10px;
+}
+
+.copybut{
+    font-size: 15px;
+    border: 1px solid white;
+    padding: 8px 5px;
+    background-color: #273e51;
+    cursor: pointer;
+}.copybut:hover{
+    background-color: rgb(57, 77, 93);
+}
+.online{
+    margin-left: 5px;
+    border-radius: 50px;
+    height: 10px;
+    width: 10px;
+    background-color: rgb(28, 223, 28);
+}
+
+.disabled{
+    display: none;
+}
+.copiedmsg{
+    font-size: 8px;
+}
+
+@keyframes backgroundMove {
+    0%{
+        background-position: left top;
+    }
+
+    25%{
+        background-position: right middle;
+    }
+
+    50%{
+        background-position: left bottom;
+    }
+
+    75%{
+        background-position: middle top;
+    }
+    100%{
+        background-position: left top;
+    }
+   
+}   
+
+@keyframes linger {
+
+        0%, 100%, 20%, 50%, 80% {
+            -webkit-transform: translateY(0);
+            -ms-transform:     translateY(0);
+            transform:         translateY(0)
+        }
+        40% {
+            -webkit-transform: translateY(-30px);
+            -ms-transform:     translateY(-30px);
+            transform:         translateY(-30px)
+        }
+        60% {
+            -webkit-transform: translateY(-15px);
+            -ms-transform:     translateY(-15px);
+            transform:         translateY(-15px)
+        }
+    
+}
+
+.team-header{
+    font-size: 18px;
+}
+.teamContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center   ;
+}
+
+.startGameBut{
+    display: inline-block;
+    padding: 8px 10px;
+    margin: 10px 0;
+    background-color: #2f8014;
+    border-radius: 5px;
+    cursor: pointer;
+}.startGameBut:hover{
+    background-color: #2e890f;
+}
+.sectionTitle{
+    display: inline-block  ;
+    padding:5px 10px;
+    background-color: white;
+    color: black;
+}
+
+.full-join{
+    font-size: 18px;
+    margin: 0px 25px;
+}
+
+.hostContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.isAdmin{
+    background-color: #ffffff;
+    margin: 0px 10px;
+    padding: 2px 5px;
+    color: #b1026b;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.isLeader{
+    background-color: #ffffff;
+    margin: 0px 10px;
+    padding: 2px 5px;
+    color: #02b16e;
+    border-radius: 6px;
+    font-weight: 600;
 }

@@ -76,8 +76,13 @@ html, body {
 /* PLayer */
 .leftAreaHeader{
     padding: 10px 0;
-    background: linear-gradient(90deg, rgb(28, 65, 52) 6%, rgba(255, 255, 255, 0.008) 15%);
+    background: linear-gradient(90deg,rgb(36, 111, 84) 6%, rgba(255, 255, 255, 0.022) 15%);
 }
+.leftAreaActive{
+    animation: pulseBG-left 3s ease infinite;
+    padding: 10px 0;
+}
+
 .leftAreaHeader .name{
     text-align: center;
     font-size: 30px;
@@ -92,8 +97,14 @@ html, body {
 
 .rightAreaHeader{
     padding: 10px 0;
-    background: linear-gradient(270deg, rgba(255,0,1) 6%, rgba(255, 255, 255, 0.008) 15%);
+    background: linear-gradient(270deg, rgb(94, 3, 21) 6%, rgba(255, 255, 255, 0.022) 15%);;
 }
+.rightAreaHeaderActive{
+    padding: 10px 0;
+    animation: pulseBG-right 3s ease infinite;
+}
+
+
 .rightAreaHeader .name{
     text-align: center;
     font-size: 30px;
@@ -177,13 +188,18 @@ html, body {
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
+.gameheader  .hoster{
+    align-self: center;
+    font-size: 18px;
 
+}
 
 /* chat */
 .gameChatContainer{
     height: 100%;
     position: relative;
-    background-color: #15232e;
+    /* background-color: #15232e; */
+    background-color: #101115;
     padding: 0px 10px;
 }
 .chat-title{
@@ -217,3 +233,36 @@ html, body {
     color: rgb(221, 221, 221);
 }
 
+/* GRADIENTS */
+
+@keyframes pulseBG-right{
+    0%{
+        background: rgba(220, 20, 60, 0)
+    }
+    20%{
+        background: rgb(94, 3, 21)
+    }
+    80%{
+        background: rgb(94, 3, 21)
+    }
+    100%{
+        background: rgba(94, 3, 21, 0)
+
+    }
+}
+
+@keyframes pulseBG-left{
+    0%{
+        background: rgba(28, 65, 52, 0) 6%
+    }
+    20%{
+        background: rgb(28, 65, 52) 6%
+    }
+    80%{
+        background: rgb(28, 65, 52) 6%
+    }
+    100%{
+        background: rgba(28, 65, 52, 0) 6%
+
+    }
+}

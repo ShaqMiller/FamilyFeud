@@ -1,31 +1,19 @@
 import './App.css';
-import LandingPage from "./routes/LandingPage";
-import GamePage from "./routes/GamePage";
-
 import store from "./store"
-import {
-  BrowserRouter,Routes,
-  // Switch,
-  Route,
-  // Link
-} from "react-router-dom";
-import {StoreProvider,createStore} from "easy-peasy"
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Router from './Router';
 // require('dotenv').config()
-
+import {StoreProvider,createStore} from "easy-peasy"
 const storeP = createStore(store)
 
 function App() {
+
+  
   return (
     <StoreProvider store={storeP}>
 
       <div className="App">
-        <BrowserRouter> 
-          <Routes>
-            <Route exact path="/" element={<LandingPage/>} />
-            <Route exact path="/gameroom" element={<GamePage/>} />
-          </Routes>
-        </BrowserRouter>
+        <Router />
       </div>
       
     </StoreProvider>

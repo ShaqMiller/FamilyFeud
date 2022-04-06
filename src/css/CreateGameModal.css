@@ -1,0 +1,73 @@
+
+.modal-content{
+    width: auto!important;
+    background: none!important;
+}
+
+.gameCreateModal{
+    background-color: #383f4a;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.createGameHeader{
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+}
+.createGameSub{
+    color: rgb(230, 230, 230);
+}
+
+.gamePrivacySelection{
+    display: flex;
+    padding: 10px 30px;
+}
+.privateBut{
+    color: white;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 200;
+    border: 1px solid #505764;
+    border-radius:  5px 0 0px 5px ;
+}
+.publicBut{
+    color: white;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 200;
+    border: 1px solid #505764;
+    border-radius:  0px 5px 5px 0px ;
+}
+.publicBut:hover,.privateBut:hover{
+    cursor: pointer;
+    background-color: #2c323c;
+}
+
+.gameCreateModal .selectedBut{
+    background-color: #2c323c;
+}
+/* PLayer dropdown */
+.gameCreateModal .dropdown-menu{
+    background-color: #FF6B6C;
+
+}
+#dropdown-player{
+    background-color: #FF6B6C;
+    border-color:#FF6B6C;
+    width: 100%;
+    text-align: left;
+}#dropdown-player:hover{
+    background-color: #b83d3d;
+    border-color:#b83d3d;
+}
+.createGameButton{
+    margin: 20px 0;
+    background-color: #FF6B6C;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+} .createGameButton:hover{
+    background-color: #b83d3d;
+    border-color:#b83d3d;
+}
